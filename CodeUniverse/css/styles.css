@@ -1,0 +1,482 @@
+/* ---------------------- RESETS -------------------------------*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style-type: none;
+	text-decoration: none;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+/* ----------------------- VARIABLES -------------------------------*/
+:root {
+	--color-primary: #1ece83;
+	--color-secondary: #545454;
+	--color-card: #eee;
+	--color-background: #fff9f9;
+	--color-hover: #2d694f;
+
+	--header-height: 6.25rem;
+
+	--font-p: 400 1rem 'Roboto', sans-serif;
+	--font-h4: 700 1.56rem 'Roboto', sans-serif;
+	--font-title: 700 3rem 'Bauhaus 93', sans-serif;
+}
+
+/* ------------------------ DEFAULT -------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@font-face {
+	font-family: 'Bauhaus93';
+	src: url('./../assets/fonts/Bauhaus93.woff') format('woff');
+}
+
+a {
+	color: var(--color-secondary);
+}
+
+body {
+	font: var(--font-p);
+	color: var(--color-secondary);
+	background-color: white;
+}
+
+.title {
+	font: var(--font-title);
+}
+
+.divider {
+	width: 100%;
+	height: 0.18rem;
+	background-color: var(--color-primary);
+	border-radius: 3.125rem;
+}
+
+.button {
+	color: white;
+	background-color: var(--color-primary);
+	width: 10rem;
+	height: 3rem;
+	padding: 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 2.5rem;
+}
+
+.button:hover {
+	background: var(--color-hover);
+	transition: background-color 0.5s;
+}
+
+/* ------------------------- LAYOUT DEFAULT ------------------------------ */
+.container {
+	width: 90%;
+	margin: 0 auto;
+}
+
+.grid {
+	display: grid;
+	gap: 2.25rem;
+}
+
+.section {
+	padding: 4rem 0;
+}
+
+#header {
+	display: flex;
+	flex-direction: column;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	width: 100%;
+
+	margin-bottom: 2rem;
+	background: white;
+	border-bottom: 1px solid var(--color-background);
+}
+
+/* ------------------------- NAVIGATION ---------------------------------- */
+
+nav.container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+nav .left {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: var(--header-height);
+}
+
+nav ul li {
+	text-align: center;
+	font-size: 2rem;
+}
+
+nav ul li a:hover {
+	color: var(--color-primary);
+	transition: color 0.3s;
+}
+
+nav .menu ul {
+	display: none;
+}
+
+nav .menu {
+	opacity: 0;
+	visibility: hidden;
+	left: 12rem;
+	transition: 0.5s;
+}
+
+.icon-menu {
+	font-size: 2rem;
+	cursor: pointer;
+}
+
+nav .button-contact {
+	opacity: 0;
+	display: none;
+}
+
+nav.show .menu {
+	opacity: 1;
+	visibility: visible;
+	background: var(--color-background);
+	height: 100vh;
+	width: 100vw;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: grid;
+	place-content: center;
+}
+
+nav.show .menu ul {
+	display: grid;
+}
+
+nav.show div.icon-x {
+	visibility: visible;
+	opacity: 1;
+	font-size: 2rem;
+	position: fixed;
+	top: 7rem;
+	right: 3rem;
+}
+
+.icon-x {
+	visibility: hidden;
+	opacity: 0;
+	position: absolute;
+}
+
+.toggle {
+	font-size: 2rem;
+	color: var(--color-secondary);
+	cursor: pointer;
+}
+
+/* ---------------------- HOME SECTION ------------------------------*/
+#home .text {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+#home .text h2 {
+	text-align: center;
+}
+
+/* ---------------------- SERVICES SECTION --------------------------*/
+#services .container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2rem;
+}
+
+#services .cards {
+	width: 100%;
+}
+
+#services .card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 15rem;
+	border-radius: 3.125rem;
+	padding: 10rem 1rem;
+}
+
+#services .card-equal {
+	background-color: var(--color-card);
+	font-family: var(--font-h4);
+	color: var(--color-primary);
+}
+
+#services .card-different {
+	color: white;
+	background-color: var(--color-primary);
+	font-family: var(--font-p);
+	text-align: center;
+}
+
+#services .card-different > h4 {
+	color: white;
+	font-family: var(--font-h4);
+}
+
+#services .card-different .image {
+	max-width: 100%;
+}
+
+/* ---------------------- ABOUT SECTION --------------------------*/
+#about .text {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: auto;
+}
+
+#about .text p {
+	font-family: var(--font-p);
+	margin-top: 1rem;
+	text-align: center;
+}
+
+#about .image {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: auto;
+}
+
+#about .image .button {
+	margin-top: 2rem;
+}
+
+/* ---------------------- CONTACTS SECTION --------------------------*/
+
+#contact h2 {
+	text-align: center;
+	font-size: 2.5rem;
+}
+
+#contact .form {
+	margin-top: 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+#contact .form .input {
+	width: 100%;
+	border: 2px solid var(--color-primary);
+	border-radius: 0.31rem;
+	height: 2rem;
+	background: rgba(30, 206, 131, 0.1);
+}
+
+#message {
+	width: 100%;
+	border: 2px solid var(--color-primary);
+	border-radius: 0.31rem;
+	background: rgba(30, 206, 131, 0.1);
+	resize: none;
+	margin-bottom: 1rem;
+}
+
+/* -------------------------- FOOTER --------------------------- */
+#footer {
+	background-color: var(--color-primary);
+}
+
+#footer .maps {
+	overflow: hidden;
+	padding-bottom: 56.25%;
+	position: relative;
+	height: 0;
+	margin-top: 3.43rem;
+	border-radius: 1rem;
+}
+
+#footer .maps iframe {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
+#footer .social {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+#footer .social h5 {
+	display: flex;
+	align-items: center;
+}
+
+#footer .social .icon {
+	color: white;
+	font: var(--font-p);
+	font-size: 1.5rem;
+	padding-top: 1rem;
+}
+
+#footer p {
+	padding: 2rem 0 1rem 0;
+	text-align: center;
+	color: white;
+	margin-left: 0.5rem;
+}
+
+/* -------------------------------- RESPONSIVE --------------------------- */
+@media (min-width: 1200px) {
+	.container {
+		max-width: 1120px;
+	}
+
+	nav .menu {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	nav .menu ul {
+		display: flex;
+		gap: 2rem;
+	}
+
+	nav .menu ul li a {
+		font: var(--font-p);
+	}
+
+	nav .icon-menu {
+		display: none;
+	}
+
+	nav .button-contact {
+		opacity: 1;
+		display: inline;
+		font: var(--font-p);
+		border: 1px solid var(--color-card);
+		padding: 0.5rem 1.5rem;
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		border-radius: 3.125rem;
+		transition: transform 0.2s;
+	}
+
+	nav .button-contact:hover {
+		transform: translateX(1rem);
+	}
+
+	nav .button-contact .icon-arrow-right {
+		color: var(--color-primary);
+	}
+	/* ------------------------------------------------------------ */
+	.title {
+		font-size: 3.6rem;
+	}
+
+	#home .container {
+		grid-auto-flow: column;
+	}
+
+	#home .text {
+		align-items: flex-start;
+		width: 32.5rem;
+	}
+
+	#home .button {
+		transition: 0.5s;
+	}
+
+	#home .button:hover {
+		transform: translateX(1rem);
+	}
+
+	/* ------------------------------------------------------------ */
+
+	#services .cards {
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-gap: 0;
+		position: relative;
+		justify-items: center;
+		align-items: end;
+	}
+
+	.card-equal {
+		/* width: 17.5rem; */
+		margin: 10rem -2rem 0 -2rem;
+		margin-top: 1rem;
+		padding: 0;
+		align-items: end;
+	}
+
+	#services .card-different {
+		margin: 0;
+		z-index: 1;
+		border-radius: 3.125rem 3.125rem 0px 0px;
+	}
+
+	#services .left {
+		justify-self: end;
+		border-radius: 3.125rem 0 0;
+	}
+
+	#services .right {
+		justify-self: start;
+		border-radius: 0 3.125rem 0 0;
+	}
+
+	/* ------------------------------------------------------------ */
+	#about {
+		background-image: url(../assets/images/paws.png);
+		background-size: auto;
+	}
+
+	#contact .container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	#contact .content {
+		width: 40%;
+	}
+
+	#contact .form .input {
+		width: 100%;
+	}
+
+	#footer .container {
+		display: grid;
+		grid-auto-flow: column;
+		grid-template-columns: 1fr 18.75rem;
+	}
+
+	#contact .form .button {
+		border: 0;
+		font: var(--font-p);
+		cursor: pointer;
+	}
+}

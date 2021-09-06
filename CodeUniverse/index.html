@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/icons/style.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <header id="header">
+      <nav class="nav container">
+        <div class="left grid">
+          <a href="#">
+            <img alt="logo" src="./assets/images/logo.png" alt="" />
+          </a>
+        
+          <div class="menu">
+            <ul class="grid">
+              <li><a class="text-nav" href="#home">Home</a></li>
+              <li><a class="text-nav" href="#services">Services</a></li>
+              <li><a class="text-nav" href="#about">Who we are</a></li>
+              <li><a class="text-nav" href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="right">
+          <div class="toggle icon-menu"></div>
+          <div class="toggle icon-x"></div>
+          <a class="button-contact" href="#contact">
+            Contacts 
+            <span class="icon-arrow-right"></span>
+          </a> 
+        </div>
+      </nav>
+      <div class='divider'></div>
+    </header>
+
+    <main>
+      <section class="section" id="home">
+        <div class="container grid">
+          <div class="text grid">
+            <h2 class="title">UNIVERSE PETSHOP</h2>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
+            <a class="button" href="#">Services</a>
+          </div>
+          <div class="image grid">
+            <img src="./assets/images/dogears.png" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="services">
+        <div class="container grid">
+          <div class="cards grid">
+            <!-- Castration card -->
+            <div class="card left card-equal">
+              <h4>CASTRATION</h4>
+              <div class="image">
+                <img src="./assets/images/castration.png" alt="A paw inside a heart" />
+              </div>
+            </div>
+
+            <!-- Bath Card -->
+            <div class="card card-different">
+              <h4>BATH AND TRIM</h4>
+              <div class="image">
+                <img src="./assets/images/bath.png" alt="A shampoo for pets" />
+              </div>
+              <p>We care with love and affection</p>
+            </div>
+
+            <!-- Products Cards -->
+            <div class="card right card-equal">
+              <h4>PRODUCTS</h4>
+              <div class="image">
+                <img src="./assets/images/products.png" alt="A ball and a bone" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="divider"></div>
+      </section>
+
+
+      <section class="section" id="about">
+        <div class="container grid">
+          <div class="text">
+            <h2 class="title">ABOUT US</h2>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text ever
+              since the 1500s, when an unknown printer took a galley of type and
+              scrambled it to make a type specimen book. It has survived not only
+              five centuries, but also the leap into electronic
+            </p>
+          </div>
+          <div class="image">
+            <div class="img-cat">
+              <img src="./assets/images/cat.png" alt="A cat">
+            </div>
+            <a class="button" href="#">Services</a>
+          </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="container grid">
+          <div class="content">
+            <h2 class="title">Contacts</h2>
+            <form class="form" onsubmit="return validForm()">
+              <label for="name">Name</label>
+              <input class="input" id="name" type="text">
+
+              <label for="phone">Telephone</label>
+              <input class="input" id="phone" type="number">
+              
+              <label for="email">E-mail</label>
+              <input class="input" id="email" type="text">
+              
+              <label for="message">Message</label>
+              <textarea id="message" cols="22" rows="10"></textarea>
+
+              <button class="button">Send</button>
+
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="footer">
+      <div class="container grid">
+        <div class="maps">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3528.9276956864132!2d-50.3234789!3d-27.811996399999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94e01f36ed163d31%3A0x9182d60354b8d2a0!2sCode%20Universe!5e0!3m2!1sen!2sbr!4v1630275203204!5m2!1sen!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div class="social">
+          <h5>
+            <span class="icon icon-phone"></span>
+            <p>(00) 000-000-000</p>
+          </h5>
+          <h5>
+            <span class="icon icon-whatsapp"></span>
+            <p>(00) 000-000-000</p>
+          </h5>
+          <h5>
+            <span class="icon icon-instagram"></span>
+            <p>@universepetshop</p>
+          </h5>
+        </div>
+      </div>
+      <p>All rights reserved - 2021</p>
+    </footer>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
